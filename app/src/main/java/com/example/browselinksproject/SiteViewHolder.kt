@@ -14,9 +14,9 @@ class SiteViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         site.text = item.site
 
         itemView.setOnClickListener {
-            val i = Intent(Intent.ACTION_VIEW)
-            i.data = Uri.parse(item.site)
-            site.context.startActivity(i)
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(item.site)
+            site.context.startActivity(intent)
         }
     }
 }
